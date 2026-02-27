@@ -1,0 +1,30 @@
+{
+  "module": "middlewarePipeline.ts",
+  "exports": [
+    {
+      "name": "NextFunction",
+      "kind": "type",
+      "description": "Function called by middleware to advance to the next handler. Returns void or a Promise."
+    },
+    {
+      "name": "MiddlewareContext",
+      "kind": "interface",
+      "description": "Shape of the context object passed to each middleware, including path, method, headers, optional body, and mutable state."
+    },
+    {
+      "name": "MiddlewareFn",
+      "kind": "type",
+      "description": "Signature for middleware functions: accepts a MiddlewareContext and NextFunction, may be async."
+    },
+    {
+      "name": "PipelineOptions",
+      "kind": "interface",
+      "description": "Configuration options for MiddlewarePipeline instances (timeoutMs, onError callback)."
+    },
+    {
+      "name": "MiddlewarePipeline",
+      "kind": "class",
+      "description": "Class that manages a stack of middleware functions; supports adding, executing, counting, clearing, and branching."
+    }
+  ]
+}
