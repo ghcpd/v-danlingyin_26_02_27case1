@@ -1,0 +1,30 @@
+{
+  "module": "middlewarePipeline.ts",
+  "exports": [
+    {
+      "name": "NextFunction",
+      "kind": "type",
+      "description": "A function type that, when called, executes the next middleware in the pipeline. Can be async or synchronous. Signature: () => Promise<void> | void"
+    },
+    {
+      "name": "MiddlewareContext",
+      "kind": "interface",
+      "description": "The context object passed to each middleware function, containing request information (path, method, headers, body) and a shared state object for passing data between middleware"
+    },
+    {
+      "name": "MiddlewareFn",
+      "kind": "type",
+      "description": "The signature for a middleware function. Takes a MiddlewareContext and NextFunction, and can be async or synchronous. Signature: (ctx: MiddlewareContext, next: NextFunction) => Promise<void> | void"
+    },
+    {
+      "name": "PipelineOptions",
+      "kind": "interface",
+      "description": "Configuration options for the MiddlewarePipeline, including timeoutMs (milliseconds before timeout) and onError (error callback handler)"
+    },
+    {
+      "name": "MiddlewarePipeline",
+      "kind": "class",
+      "description": "Main class for creating and managing middleware pipelines. Provides methods to add middleware (use), execute the pipeline (execute), inspect the pipeline (count), reset it (clear), and create sub-pipelines (branch)"
+    }
+  ]
+}
