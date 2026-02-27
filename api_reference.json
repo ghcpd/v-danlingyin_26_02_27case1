@@ -1,0 +1,30 @@
+{
+  "module": "middlewarePipeline.ts",
+  "exports": [
+    {
+      "name": "MiddlewarePipeline",
+      "kind": "class",
+      "description": "Main pipeline class for registering and executing ordered middleware functions with timeout and error handling."
+    },
+    {
+      "name": "MiddlewareContext",
+      "kind": "interface",
+      "description": "Context object passed into middleware; includes request metadata and a shared mutable `state` object."
+    },
+    {
+      "name": "MiddlewareFn",
+      "kind": "type",
+      "description": "Function signature for middleware handlers; receives a `MiddlewareContext` and a `NextFunction`."
+    },
+    {
+      "name": "PipelineOptions",
+      "kind": "interface",
+      "description": "Configuration options for `MiddlewarePipeline`, including `timeoutMs` and `onError` callback."
+    },
+    {
+      "name": "NextFunction",
+      "kind": "type",
+      "description": "Type for the `next` callback passed into middleware; returns `void` or `Promise<void>`."
+    }
+  ]
+}
